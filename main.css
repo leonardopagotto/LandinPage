@@ -71,3 +71,17 @@ margin-bottom: 50px;
     align-items: baseline;
 }
 
+.carousel-control-prev{
+
+    background-color: orange;
+}
+
+.carousel-control-next{
+
+    background-color: orange;
+
+}
+
+.display-grid{
+    display: grid !important;
+}
