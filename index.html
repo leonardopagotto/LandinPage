@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet"
+          href="main.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row mt-5">
+            <div class="col text-center">
+                <img class="img-fluid"
+                     src="Imagens/Beleza.svg">
+            </div>
+
+        </div>
+        <div class="row mt-5">
+            <div class="col text-center">
+                <img class="img-fluid logo"
+                     src="Imagens/Logo.png">
+            </div>
+
+        </div>
+        <div class="row mt-5">
+            <div class="col text-center no-mp">
+                <img class="img-fluid"
+                     src="Imagens/Cruzado.png">
+            </div>
+
+        </div>
+        <div class="row mt-5">
+            <div class="col text-center">
+                <p class="intro-txt">As lojas Propz possuem um espaço beleza onde você encontra tudo para montar looks
+                    únicos.
+                    Venha Conhecer!</p>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div id="carouselExampleSlidesOnly"
+                 class="carousel slide"
+                 data-ride="carousel">
+                <div class="carousel-inner">
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col text-center no-mp">
+                <img class="img-fluid cruz2"
+                     src="Imagens/Cruzado.png">
+            </div>
+
+        </div>
+
+        <div class="row list">
+            <div class="col-6 text-center box">
+
+                <ul class="list-group">
+                    <li class="list-group-item title">Lojas Propz</li>
+                    <hr class="hr">
+                    <li class="list-group-item">Belo Horizonte</li>
+                    <li class="list-group-item">Campinas</li>
+                    <li class="list-group-item">São Paulo</li>
+                    <li class="list-group-item">Rio de Janeiro</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col text-center">
+                <img class="img-fluid logo2"
+                     src="Imagens/Logo.png">
+            </div>
+        </div>
+        <div class="row end-txt">
+            <div class="col text-center">
+                <span class="Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, iure quae
+                    dignissimos fugit esse voluptas exercitationem officiis voluptatem porro quisquam nostrum facilis
+                    animi minima dolorem repellat aliquam ipsa iste! Ratione.</span>
+                <span class="Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, iure quae
+                    dignissimos fugit esse voluptas exercitationem officiis voluptatem porro quisquam nostrum facilis
+                    animi minima dolorem repellat aliquam ipsa iste! Ratione.</span>
+                <span class="Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, iure quae
+                    dignissimos fugit esse voluptas exercitationem officiis voluptatem porro quisquam nostrum facilis
+                    animi minima dolorem repellat aliquam ipsa iste! Ratione.</span>
+            </div>
+
+        </div>
+
+        <div>
+            <div>
+                <h1 class="aleatorio">120x</h1>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const carrousel = document.getElementsByClassName('carousel-inner')[0]
+            var URL = '';
+            var request = new XMLHttpRequest();
+            request.open('GET', URL);
+            request.responseType = 'json';
+            request.send();
+
+            request.onload = function () {
+                var data = request.response;
+                populateProducts(data);
+            }
+
+            function populateProducts(json) {
+                var products = json['produtos'];
+
+                for (var i = 0; i < products.length; i++) {
+
+                    var carrouselItem = document.createElement('div')
+                    var imagem = document.createElement('img')
+
+                    if (i === 0) {
+                        carrouselItem.className = 'carousel-item active'
+                    }
+                    else {
+                        carrouselItem.className = 'carousel-item'
+                    }
+
+                    imagem.src = products[i].imagem
+
+                    carrouselItem.appendChild(imagem);
+                    carrousel.appendChild(carrouselItem);
+                }
+            }
+
+            $('#carouselExampleSlidesOnly').on('slid.bs.carousel', function () {
+
+
+
+                var requestURL = '';
+                var request = new XMLHttpRequest();
+                request.open('GET', requestURL);
+                request.responseType = 'json';
+                request.send();
+                request.onload = function () {
+
+
+                    let i = $('.carousel-inner .active').index()
+
+
+                    var data = request.response;
+                    const name = document.getElementsByClassName('aleatorio')[0]
+                    const precocom = document.getElementsByClassName('precocom')[0]
+                    const precosem = document.getElementsByClassName('precosem')[0]
+                    const precoa = document.getElementsByClassName('precoa')[0]
+                    name.textContent = data['produtos'][i].preçoComJuros
+                }
+            })
+
+        })
+
+
+
+
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

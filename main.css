@@ -1,0 +1,73 @@
+.logo{
+    width: 150px;
+}
+.no-mp{
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.intro-txt{
+
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 10px 29px;
+}
+
+.hr{
+    
+   width: 80%;
+   height: 0.3px;
+   background-color: grey;
+
+}
+
+.box{
+    max-width: 270px !important;
+    border:solid gold;
+}
+
+.list-group-item{
+    
+    border: none !important; 
+    outline: none !important;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.list{
+    justify-content: center;
+}
+
+.logo2{
+    width: 100px;
+}
+
+.Lorem{
+    max-width: 300px;
+    margin-top: 100px;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-left: 15px;
+}
+
+.text-container{
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center
+}
+
+.end-txt{
+margin-top:30px;
+margin-bottom: 50px;
+}
+
+.ofertas{
+    display: flex;
+    justify-content: space-around;
+    max-width: 280px;
+    align-items: baseline;
+}
+

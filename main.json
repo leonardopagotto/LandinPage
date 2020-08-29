@@ -1,0 +1,60 @@
+
+  {
+    "produtos": [
+        {
+            "nome": "Tamanco Clara Verniz - Preto",
+            "preçoComJuros": "7X de R$27,50",
+            "preçoSemJuros": "5X de R$29,98",
+            "preçoAVista": "ou R$149,90 à vista",
+            "imagem": "Imagens/Tamanco.png",
+            "pagamentoVisa": "Imagens/Visa.svg",
+            "pagamentoMaster": "Imagens/mastercard.svg"
+        },
+        {
+            "nome": "Sapatilha Moleca Laço Tresse Verniz Feminina - Vinho",
+            "preçoComJuros": "3X de R$21,52",
+            "preçoSemJuros": "2X de R$23,98",
+            "preçoAVista": "ou R$69,75 à vista",
+            "imagem": "Imagens/Sapatilha.png",
+            "pagamentoVisa": "Imagens/Visa.svg",
+            "pagamentoMaster": "Imagens/mastercard.svg"
+        },
+        {
+            "nome": "Brinco Life My Rose Topázios Com Banho Ouro Rosé",
+            "preçoComJuros": "10X de R$52,70",
+            "preçoSemJuros": "7X de R$55,71",
+            "preçoAVista": "ou R$390,00 à vista",
+            "imagem": "Imagens/Brinco.png",
+            "pagamentoVisa": "Imagens/Visa.svg",
+            "pagamentoMaster": "Imagens/mastercard.svg"
+        },
+        {
+            "nome": "Moda Pop - Vestido Curto Poá com Gola Laço",
+            "preçoComJuros": "3X de R$18,09",
+            "preçoSemJuros": "2X de R$19,99",
+            "preçoAVista": "ou R$39,99 à vista",
+            "imagem": "Imagens/Vestido.png",
+            "pagamentoVisa": "Imagens/Visa.svg",
+            "pagamentoMaster": "Imagens/mastercard.svg"
+        },
+        {
+            "nome": "Chapéu Panamá Roosevelt",
+            "preçoComJuros": "5X de R$65,80",
+            "preçoSemJuros": "3X de R$66,67",
+            "preçoAVista": "ou R$200,00 à vista",
+            "imagem": "Imagens/Chapéu.png",
+            "pagamentoVisa": "Imagens/Visa.svg",
+            "pagamentoMaster": "Imagens/mastercard.svg"
+        },
+        {
+            "nome": "CH Carolina Herrera Eau de Toilette",
+            "preçoComJuros": "15X de R$40,80",
+            "preçoSemJuros": "10X de R$51,90",
+            "preçoAVista": "ou R$519,00 à vista",
+            "volume": "100mL",
+            "imagem": "Imagens/Perfume.png",
+            "pagamentoVisa": "Imagens/Visa.svg",
+            "pagamentoMaster": "Imagens/mastercard.svg"
+        }
+    ]
+}
